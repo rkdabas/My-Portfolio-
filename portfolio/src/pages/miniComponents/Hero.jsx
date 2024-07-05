@@ -20,7 +20,7 @@ const Hero = () => {
   useEffect(() => {
     const getMyProfile = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/me/portfolio",
+        "https://my-portfolio-2-0bi0.onrender.com/api/v1/user/me/portfolio",
         { withCredentials: true }
       );
       setUser(data.user);
@@ -88,12 +88,12 @@ const Hero = () => {
           </Button>
         </Link>
 
-        <Link to="http://localhost:5173" target="_blank">
+        <Link to="http://localhost:5174" target="_blank">
           <Button className="rounded-[30px] flex items-center gap-2 flex-row">
             <span>
               <ExternalLink />
             </span>
-            <span>Return To Dashboard </span>
+            <span>Go To Dashboard </span>
           </Button>
         </Link>
       </div>

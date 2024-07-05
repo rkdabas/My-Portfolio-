@@ -19,9 +19,12 @@ const ViewProject = () => {
   useEffect(() => {
     const getProject = async () => {
       await axios
-        .get(`http://localhost:4000/api/v1/project/get/${id}`, {
-          withCredentials: true,
-        })
+        .get(
+          `https://my-portfolio-2-0bi0.onrender.com/api/v1/project/get/${id}`,
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           setTitle(res.data.project.title);
           setDescription(res.data.project.description);
