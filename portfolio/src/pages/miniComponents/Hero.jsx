@@ -87,6 +87,15 @@ const Hero = () => {
             <span>Resume </span>
           </Button>
         </Link>
+
+        <Link to="http://localhost:5173" target="_blank">
+          <Button className="rounded-[30px] flex items-center gap-2 flex-row">
+            <span>
+              <ExternalLink />
+            </span>
+            <span>Return To Dashboard </span>
+          </Button>
+        </Link>
       </div>
       <hr className="my-8 md::my-10 " />
     </div>
