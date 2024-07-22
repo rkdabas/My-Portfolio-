@@ -45,9 +45,9 @@ const HomePage = () => {
       toast.error(error);
       dispatch(clearAllUserErrors());
     }
-    // if (!isAuthenticated) {
-    //   navigateTo("/login");
-    // }
+    if (!isAuthenticated) {
+      navigateTo("/login");
+    }
   }, [isAuthenticated]);
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
