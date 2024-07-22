@@ -45,7 +45,12 @@ const Hero = () => {
       sm:text-[1.75rem] md:text-[2.2rem] lg:text-[2.8rem] tracking-[15px]"
       >
         <Typewriter
-          words={["FULLSTACK DEVELOPER", "STUDENT"]}
+          words={[
+            "FULLSTACK DEVELOPER",
+            "STUDENT",
+            "Coder",
+            "Software Developer",
+          ]}
           loop={50}
           cursor
           typeSpeed={70}
@@ -60,8 +65,8 @@ const Hero = () => {
         <Link to={user.linkedInURL} target="_blank">
           <Linkedin className="text-sky-500 w-7 h-7" />
         </Link>
-        <Link to={user.leetcodeURL} target="_blank">
-          <Code className="text-blue-800 w-7 h-7" />
+        <Link to={user.githubURL} target="_blank">
+          <Github className="text-blue-800 w-7 h-7" />
         </Link>
         <Link to={user.instagramURL} target="_blank">
           <Instagram className="text-pink-500 w-7 h-7" />
@@ -71,14 +76,30 @@ const Hero = () => {
         </Link>
       </div>
       <div className="mt-4 md:mt-8 lg:mt-10  flex gap-3">
-        <Link to={user.githubURL} target="_blank">
+        <Link to={user.leetcodeURL} target="_blank">
           <Button className="rounded-[30px] flex items-center gap-2 flex-row">
             <span>
-              <Github />
+              <Code />
             </span>
-            <span>Github</span>
+            <span>Leetcode</span>
           </Button>
         </Link>
+        <Link to="https://www.geeksforgeeks.org/user/rkd_25/" target="_blank">
+          <Button className="rounded-[30px] flex items-center gap-2 flex-row">
+            <span>
+              <Code />
+            </span>
+            <span>GFG</span>
+          </Button>
+        </Link>
+        {/* <Link to={user.codeforcesURL} target="_blank">
+          <Button className="rounded-[30px] flex items-center gap-2 flex-row">
+            <span>
+              <Code />
+            </span>
+            <span>Codeforces</span>
+          </Button>
+        </Link> */}
         <Link to={user.resume && user.resume.url} target="_blank">
           <Button className="rounded-[30px] flex items-center gap-2 flex-row">
             <span>

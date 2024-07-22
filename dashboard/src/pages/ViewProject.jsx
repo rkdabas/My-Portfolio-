@@ -31,7 +31,7 @@ const ViewProject = () => {
           setStack(res.data.project.stack);
           setDeployed(res.data.project.deployed);
           setTechnologies(res.data.project.technologies);
-          setGitRepoLink(res.data.project.gitRepoName);
+          setGitRepoLink(res.data.project.githubLink);
           setProjectLink(res.data.project.projectLink);
           setProjectBanner(
             res.data.project.projectBanner && res.data.project.projectBanner.url

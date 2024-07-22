@@ -50,6 +50,8 @@ export const register = catchAsyncErrors(async (req, res, next) => {
     twitterURL,
     leetcodeURL,
     linkedInURL,
+    gfgURL,
+    codeforcesURL,
   } = req.body;
 
   const user = await User.create({
@@ -64,6 +66,8 @@ export const register = catchAsyncErrors(async (req, res, next) => {
     instagramURL,
     portfolioURL,
     twitterURL,
+    gfgURL,
+    codeforcesURL,
     avatar: {
       public_id: cloudinaryResponseForAvatar.public_id,
       url: cloudinaryResponseForAvatar.secure_url,
@@ -127,10 +131,12 @@ export const updateProfile = catchAsyncErrors(async (req, res, next) => {
     phone: req.body.phone,
     aboutMe: req.body.aboutMe,
     githubURL: req.body.githubURL,
-    linkednURL: req.body.linkednURL,
+    linkedInURL: req.body.linkednURL,
     leetcodeURL: req.body.leetcodeURL,
     twitterURL: req.body.twitterURL,
     portfolioURL: req.body.portfolioURL,
+    gfgURL: req.body.gfgURL,
+    codeforcesURL: req.body.codeforcesURL,
   };
 
   // updating avatar
@@ -169,7 +175,7 @@ export const updateProfile = catchAsyncErrors(async (req, res, next) => {
     };
   }
   // updating other updated info(fullname,phone etc) of that user in schema
-  const user = await User.findByIdAndDelete(req.user.id, newUserData, {
+  const user = await User.findByIdAndUpdate(req.user.id, newUserData, {
     new: true,
     runValidators: true,
     useFindAndModify: false,
@@ -221,7 +227,7 @@ export const forgotPassword = catchAsyncErrors(async (req, res, next) => {
   if (!user) {
     return next(new ErrorHandler("user not found!", 404));
   }
-  const resetToken = user.getResetPasswordToken();
+  const resetToken = user.resetPasswordToken();
   await user.save({ validateBeforeSave: true });
   const resetPasswordURL = `${process.env.DASHBOARD_URL}/password/reset/${resetToken}`;
   const message = `Your reset password is:-\n\n ${resetPasswordURL} \n\n If you have not requested for this please ignore it.`;

@@ -65,6 +65,12 @@ const userSchema = new mongoose.Schema({
   leetcodeURL: {
     type: String,
   },
+  gfgURL: {
+    type: String,
+  },
+  codeforcesURL: {
+    type: String,
+  },
   resetPasswordToken: String,
   resetPasswordExpire: Date,
 });

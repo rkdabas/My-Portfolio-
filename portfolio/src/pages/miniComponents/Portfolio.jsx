@@ -32,6 +32,16 @@ const Portfolio = () => {
           MY{" "}
           <span className="text-tubeLight-effect font-extrabold">PROJECTS</span>
         </h1>
+        <h1
+          className="hidden sm:flex gap-4 items-center text-[2rem] sm:text-[2.75rem] md:text-[3rem] 
+          lg:text-[3.8rem] leading-[56px] md:leading-[67px] lg:leading-[90px] tracking-[15px] 
+          mx-auto w-fit font-bold about-h1"
+          style={{
+            background: "hsl(222.2 84% 4.9%)",
+          }}
+        >
+          Click on them
+        </h1>
         {/* when display size is small like phone screen then show "My Work" instead of "My Projects" */}
         <h1
           className="flex sm:hidden gap-4 items-center text-[2rem] sm:text-[2.75rem] 

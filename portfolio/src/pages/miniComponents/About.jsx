@@ -49,9 +49,7 @@ const About = () => {
               I am a Computer Engineering(COE) student at Delhi Technological
               University(DTU), with a strong academic record and a CGPA of 8.28.
               Proficient in C/C++, Python, JavaScript, and various web
-              development frameworks like ReactJS, MongoDB, and NodeJS. I have
-              demonstrated my skills through impactful internships and academic
-              projects.
+              development frameworks like ReactJS, MongoDB, and NodeJS. 
             </p>
             <p>
               I have demonstrated my skills through impactful internships and
